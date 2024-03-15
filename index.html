@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <script src="/index.js" defer async></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Info -->
+    <div class="info">
+        <div class="info_container" id="main">
+            <div class="goren_del">
+                <h1 class="den">Saturday</h1>
+                <h2 class="datum">13 Mar 2014</h2>
+
+                <div class="lokacija_main">
+                    Prilep, MK
+                </div>
+            </div>
+
+            <div class="dolen_del">
+                <img class="glaven_icon"/>
+                <h1 class="temperatura">20°C</h1>
+                <h2 class="vreme_text">Sunny</h2>
+            </div>
+        </div>
+        <div class="dopolnitelen_info">
+            <div class="dopolnitelen_info_text">
+                <h3>PRESSURE</h1>
+                <p id="pritisok">1016 hPa</p>
+            </div>
+            <div class="dopolnitelen_info_text">
+                <h3>HUMIDITY</h1>
+                <p id="vlaznost">79 %</p>
+            </div>
+            <div class="dopolnitelen_info_text">
+                <h3>WIND SPEED</h1>
+                <p id="vetar">0.18 km/h</p>
+            </div>
+            <div class="dopolnitelen_info_text">
+                <h3>DIRECTION</h1>
+                <p id="direkcija">130°</p>
+            </div>
+            <!-- Sonce -->
+            <div class="sonce_container">
+                <!-- Sunrise -->
+                <div class="sunrise">
+                    <svg class="icona" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M4.25 19a.75.75 0 0 1 .75-.75h14a.75.75 0 0 1 0 1.5H5a.75.75 0 0 1-.75-.75m3 3a.75.75 0 0 1 .75-.75h8a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75M12 1.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0V2a.75.75 0 0 1 .75-.75M4.399 4.399a.75.75 0 0 1 1.06 0l.393.392a.75.75 0 0 1-1.06 1.061l-.393-.393a.75.75 0 0 1 0-1.06m15.202 0a.75.75 0 0 1 0 1.06l-.393.393a.75.75 0 0 1-1.06-1.06l.393-.393a.75.75 0 0 1 1.06 0M1.25 12a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75m19 0a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/><path fill="currentColor" d="M5.25 12c0 1.178.302 2.286.833 3.25H2a.75.75 0 0 0 0 1.5h9.25v-4.94l-.72.72a.75.75 0 1 1-1.06-1.06l2-2a.75.75 0 0 1 1.06 0l2 2a.75.75 0 1 1-1.06 1.06l-.72-.72v4.94H22a.75.75 0 0 0 0-1.5h-4.083A6.75 6.75 0 1 0 5.25 12"/></svg>
+                    <p id="sunrise">06:44</p>
+                </div>
+                <div style="display:flex; align-items: center; width: 100%; height:3px; background-color: rgb(115 115 115); border-radius: 5px;">
+                    <svg class="sredina_sonce" viewBox="0 0 256 256"><path fill="currentColor" d="M120 40V16a8 8 0 0 1 16 0v24a8 8 0 0 1-16 0m8 24a64 64 0 1 0 64 64a64.07 64.07 0 0 0-64-64m-69.66 5.66a8 8 0 0 0 11.32-11.32l-16-16a8 8 0 0 0-11.32 11.32Zm0 116.68l-16 16a8 8 0 0 0 11.32 11.32l16-16a8 8 0 0 0-11.32-11.32M192 72a8 8 0 0 0 5.66-2.34l16-16a8 8 0 0 0-11.32-11.32l-16 16A8 8 0 0 0 192 72m5.66 114.34a8 8 0 0 0-11.32 11.32l16 16a8 8 0 0 0 11.32-11.32ZM48 128a8 8 0 0 0-8-8H16a8 8 0 0 0 0 16h24a8 8 0 0 0 8-8m80 80a8 8 0 0 0-8 8v24a8 8 0 0 0 16 0v-24a8 8 0 0 0-8-8m112-88h-24a8 8 0 0 0 0 16h24a8 8 0 0 0 0-16"/></svg>
+                </div>
+                <!-- Sunset -->
+                <div class="sunset">
+                    <svg class="icona" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M4.25 19a.75.75 0 0 1 .75-.75h14a.75.75 0 0 1 0 1.5H5a.75.75 0 0 1-.75-.75m3 3a.75.75 0 0 1 .75-.75h8a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75M12 1.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0V2a.75.75 0 0 1 .75-.75M4.399 4.399a.75.75 0 0 1 1.06 0l.393.392a.75.75 0 0 1-1.06 1.061l-.393-.393a.75.75 0 0 1 0-1.06m15.202 0a.75.75 0 0 1 0 1.06l-.393.393a.75.75 0 0 1-1.06-1.06l.393-.393a.75.75 0 0 1 1.06 0M1.25 12a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75m19 0a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/><path fill="currentColor" d="M5.25 12c0 1.178.302 2.286.833 3.25H2a.75.75 0 0 0 0 1.5h20a.75.75 0 0 0 0-1.5h-4.083a6.751 6.751 0 0 0-5.167-9.959v4.898l.72-.72a.75.75 0 1 1 1.06 1.061l-2 2a.75.75 0 0 1-1.06 0l-2-2a.75.75 0 1 1 1.06-1.06l.72.72v-4.9a6.751 6.751 0 0 0-6 6.709"/></svg>
+                    <p id="sunset">18:23</p>
+                </div>
+            </div>
+
+            <div class="idno_vreme_container">
+                <div class="idno_vreme active">
+                    <img class="icona">
+                    <h3>Sat</h3>
+                    <h4>29°C</h4>
+                </div>
+                <div class="idno_vreme">
+                    <img class="icona">
+                    <h3>Sat</h3>
+                    <h4>29°C</h4>
+                </div>
+                <div class="idno_vreme">
+                    <img class="icona">
+                    <h3>Sat</h3>
+                    <h4>29°C</h4>
+                </div>
+                <div class="idno_vreme">
+                    <img class="icona">
+                    <h3>Sat</h3>
+                    <h4>29°C</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Lokacii -->
+    <div class="lokacii_container">
+        <div class="lokacija active">
+            <h4>Prilep, MK</h4>
+        </div>
+        <button class="lokacija">
+            <svg class="icona" viewBox="0 0 256 256"><path fill="currentColor" d="M228 128a12 12 0 0 1-12 12h-76v76a12 12 0 0 1-24 0v-76H40a12 12 0 0 1 0-24h76V40a12 12 0 0 1 24 0v76h76a12 12 0 0 1 12 12"/></svg>
+        </button>
+    </div>
+
+    <dialog class="dialog">
+        <h2>LOCATION</h2>
+        <p>Add new location like <b>Prilep, Macedonia</b></p>
+        <input type="text">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px;">
+            <button class="secondary">Cancel</button>
+            <button type="submit">Add</button>
+        </div>
+    </dialog>   
+</body>
+</html>

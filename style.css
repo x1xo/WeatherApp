@@ -1,0 +1,217 @@
+* { margin: 0; padding: 0;}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(23,23,23);
+    color: white;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    padding-top: 24px;
+}
+.info { 
+    display: flex;
+    align-items: center;
+}
+.info_container {
+    width: 18rem;
+    height: 24rem;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+.den { 
+    font-weight: 900;
+}
+.datum {
+    font-weight: 300;
+}
+.lokacija_main {
+    margin-top: 10px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px
+}
+.lokacija_icon {
+    color: white;
+    width: 24px;
+    height: 24px;
+}
+
+.glaven_icon {
+    width: 48px;
+    height: 48px;
+    color: white;
+}
+.temperatura {
+    font-weight: 900;
+    font-size: 48px;
+}
+
+.dopolnitelen_info {
+    background-color: rgb(32,32,32);
+    width: 24rem;
+    height: 24rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 24px;
+}
+.dopolnitelen_info_text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 10px 0;
+}
+.dopolnitelen_info_text > h3 { font-weight: 900;}
+.dopolnitelen_info_text > p { 
+    font-weight: 300;
+    color: rgb(212 212 212);
+}
+
+.sonce_container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 24px 0px 24px 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.sunrise, .sunset { position: relative;}
+.sunrise > p, .sunset > p { 
+    position: absolute; 
+    bottom: -40px; 
+    text-align: center;
+    color: rgb(212 212 212)
+}
+
+.sunrise > p { left: -5px; }
+.sunset > p { right: -5px; }
+
+.icona {
+    width: 32px;
+    height: 32px;
+    color: white;
+    border: none;
+    outline: none;
+}
+.sredina_sonce {
+    width: 32px;
+    height: 32px;
+    color: white;
+    margin-left: 90%;
+}
+
+.idno_vreme_container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.idno_vreme {
+    grid-column: span 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(38,38,38);
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+}
+.active {
+    background-color: rgb(245 245 245) !important;
+    color: black !important;
+}
+.lokacii_container {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 10px;
+    align-items: center;
+    padding: 24px;
+} 
+
+.lokacija {
+    width: 4rem;
+    height: 4rem;
+    padding: 20px;
+    background-color: rgb(38,38,38);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+.new_lokacija {
+    width: 4rem;
+    height: 4rem;
+    padding: 20px;
+    background-color: rgb(38,38,38);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+dialog {
+    background-color: rgb(38,38,38);
+    border: none;
+    width: 24rem;
+    height: 10rem;
+    margin: auto;
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+dialog > h2 { font-weight: 900; }
+dialog > input {
+    background-color: rgb(64 64 64);
+    border:none;
+    outline: none;
+    height: 2.25rem;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+dialog > div > button {
+    width: max-content;
+    padding: 10px 20px;
+    background-image: linear-gradient(to top, rgba(16,185,129, 0.6), rgba(34,211,238,0.6));
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 900;
+    font-size: 14px;
+}
+.secondary {
+    width: max-content;
+    padding: 10px 20px;
+    background: rgb(64,64,64);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
