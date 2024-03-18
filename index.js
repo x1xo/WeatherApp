@@ -124,6 +124,7 @@ async function main() {
 
         let lokacii = localStorage.getItem("lokacii");
         try{lokacii = JSON.parse(lokacii)}catch(err){console.log(err),lokacii = []}
+        if(!Array.isArray(lokacii)) lokacii=[];
         lokacii.push(`${data.location.name}, ${data.location.country}`);
         localStorage.setItem("lokacii", JSON.stringify(lokacii));
 
